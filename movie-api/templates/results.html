@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Results | {% endblock %}
+{% block content %}
+<div class="recommendations">
+    <a href="/"><img src="/static/images/logo.png" alt="logo"/><h1>Cine</h1></a>
+    <form action="/process_form" method="post">
+        <input type="search" name="movie_name" value="{{ movie_name }}" placeholder="Enter movie name:" required/>
+        <button type="submit">search</button>
+    </form>
+</div>
+    
+<div class="recommendation">
+    
+    <h5 class=" pb-2">Closest match to the movie titled "{{ movie_name }}"</h5>
+    <div class="c-movies">
+        {% for movie in close_match %}
+            <div class="card" style="width: 18rem;">
+                <img src="/static/images/moviee.jpg" class="card-img-top" alt="{{ movie.title }}.jpg">
+                <div class="card-body">
+                    <h5 class="card-title">{{ movie.title }}</h5>
+                    <p class="card-text">{{ movie.overview }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    
+    <br/>
+    <div>
+        <h5>Recommended movies</h5>
+        <p class="text-primary pb-2">If you like {{ movie_name }} you will also like;</p>
+    </div>
+    <div class="r-movies">
+        {% for movie in similar_movies %}
+            <div class="card" style="width: 18rem;">
+                <img src="/static/images/moviee.jpg" class="card-img-top" alt="{{ movie.title }}.jpg">
+                <div class="card-body">
+                    <h5 class="card-title">{{ movie.title }}</h5>
+                    <p class="card-text truncate">{{ movie.overview }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

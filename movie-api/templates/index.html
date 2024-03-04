@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie predict</title>
-</head>
-<body>
-    <h1>Movie recommendation system</h1>
+{% extends "base.html" %}
+
+{% block title %}{% endblock %}
+{% block content %}
+<div class="home">
+    <a href="/"><img src="/static/images/logo.png" alt="logo"/><h1>Cine</h1></a>
+    <p>Cinematch is a movie recommendation system that helps users discover new movies based on their preferences. By entering the name of a movie they enjoyed, users can receive recommendations for similar movies that they may also like. Our algorithm analyzes various features of the input movie, such as genre, plot keywords, and user ratings, to find the best matches from our extensive database. Whether you're in the mood for action, romance, comedy, or thriller, Cinematch has you covered. Try it out now by entering the name of your favorite movie!</p>
     <form action="/process_form" method="post">
-        <input type="text" name="movie_name" placeholder="Enter movie name:"/>
-        <input type="submit" value="submit"/>
+        <input type="search" name="movie_name" placeholder="Enter movie name" required/>
+        <button type="submit">search</button>
     </form>
-    
-</body>
-</html>
+</div>
+{% endblock %}

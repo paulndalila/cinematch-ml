@@ -1,0 +1,152 @@
+/* black: #0C0E0C
+gray: EAEBEA
+red: D8323C
+pinkish: C72C41
+purple: 2D142C
+dark gray: 515151
+light-purple: 510A32 */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* font-family: 'Oswald', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    color: #EAEBEA;
+    position: relative;
+    overflow-x: hidden;
+    padding: 20px 77px;
+    box-sizing: border-box;
+    background-color: #0C0E0C;
+    font-family: 'Poppins', Times, serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+h5, p{
+    padding: 0;
+    margin: 0;
+}
+
+h1::after{
+    content: 'Match';
+    color: #D8323C;
+}
+
+.home{
+    height: calc(80vh - 40px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div a{
+    gap: 10px;
+    color: #EAEBEA;
+    display: flex;
+    overflow: hidden;
+    align-items: baseline;
+    justify-content: center;
+}
+
+div a img{
+    height: 50px;
+}
+
+.home p{
+    text-align: center;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.recommendations{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form{
+    width: 500px;
+    background: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    margin-top: 10px;
+    border: 1px solid #C72C41;
+    justify-content: space-between;
+}
+
+form input, form button{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 8px 20px;
+    font-family: 'Poppins', Times, serif;
+}
+
+form input{
+    flex-grow: 1;
+}
+
+form button{
+    color: #fff;
+    cursor: pointer;
+    padding: 8px 25px;
+    background-color: #C72C41;
+}
+
+.recommendations form{
+    margin: auto;
+}
+
+.recommendation{
+    margin-top: 20px;
+}
+
+.c-movies{
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.r-movies{
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    cursor: pointer;
+    height: 350px;
+    overflow: hidden;
+}
+.truncate {
+    overflow: hidden;
+}
+
+.expanded{
+    height: fit-content;
+    border: 1px solid #D8323C;
+}
+
+/* .card:hover .truncate{
+    height: fit-content;
+} */
