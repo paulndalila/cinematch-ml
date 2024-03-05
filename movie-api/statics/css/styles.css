@@ -1,17 +1,4 @@
-/* black: #0C0E0C
-gray: EAEBEA
-red: D8323C
-pinkish: C72C41
-purple: 2D142C
-dark gray: 515151
-light-purple: 510A32 */
-
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
-
-/* font-family: 'Oswald', sans-serif;
-font-family: 'Poppins', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Roboto', sans-serif; */
 
 html{
     scroll-behavior: smooth;
@@ -146,7 +133,3 @@ form button{
     height: fit-content;
     border: 1px solid #D8323C;
 }
-
-/* .card:hover .truncate{
-    height: fit-content;
-} */
